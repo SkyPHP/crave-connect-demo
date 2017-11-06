@@ -1,0 +1,36 @@
+{
+  "name": "crave-connect-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon -L  ./server.js",
+    "dev": "NODE_ENV=dev  nodemon -L ./server.js --ignore 'public/*/*.js'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cjemagid/crave-connect-demo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cjemagid/crave-connect-demo/issues"
+  },
+  "homepage": "https://github.com/cjemagid/crave-connect-demo#readme",
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.3",
+    "crave-connect": "^1.0.1",
+    "dateformat": "^3.0.2",
+    "debug": "^3.1.0",
+    "express": "^4.16.2",
+    "hogan-express": "^0.5.2",
+    "http": "0.0.0",
+    "morgan": "^1.9.0",
+    "path": "^0.12.7",
+    "serve-favicon": "^2.4.5",
+    "truncate": "^2.0.0"
+  }
+}

@@ -1,0 +1,11 @@
+<div>
+    <h1>This is the index page</h1>
+</div>
+<div>
+    {{#data.rows}}
+        <div>
+            <img src="{{flyer}}?w=100&h=100">
+        <a href="/events/{{id}}">{{name}}</a>
+        </div>
+    {{/data.rows}}
+</div>

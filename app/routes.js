@@ -18,8 +18,6 @@ router.get('/events/:id', (req,res,next) => {
     client.get_event({
         id: req.params.id
     }).then(data => {
-        console.log(data);
-
         return res.render('profile', {
             data
         });

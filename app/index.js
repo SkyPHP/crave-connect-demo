@@ -19,6 +19,8 @@ global.truncate = require('truncate');
 global.client = new CraveConnect({token: 'r13ExLh7lBke1NlLnmeHy@yNg8ddd' , staging : true});
 
 
+
+
 app.set('view engine', 'html');
 app.set('layout',  'layout');
 
@@ -33,6 +35,12 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 
+
+app.use(function(req,res,next) {
+    res.locals.utils = require('./lib/utils');
+    next();
+})
+
 app.use(require('./routes'))
 
 // catch 404 and forward to error handler
@@ -45,6 +53,8 @@ app.use(function(err, req, res, next) {
             return res.status(redir.status || 302).redirect(redir.redirect);
         }
     }
+
+    
 
     var err = new Error('Not Found');
     err.status = 404;
